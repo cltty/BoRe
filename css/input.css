@@ -1,0 +1,271 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f0eb;
+  margin: 0;
+}
+
+.navbar-container {
+  background-color: #ebe0d6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 3em;
+}
+.navbar-container__logo {
+  padding: 0.3em;
+  font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+  color: #663300;
+  font-weight: bold;
+  font-size: 28px;
+  text-shadow: 1px 1px grey;
+}
+.navbar-container__primaryBox {
+  display: flex;
+  flex-direction: row;
+}
+.navbar-container__primaryBox--button {
+  padding: 0.5em;
+  font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+  color: #663300;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.navbar-container__primaryBox--button:hover {
+  text-shadow: 2px 2px 5px grey;
+}
+.navbar-container__secondaryBox {
+  display: flex;
+  flex-direction: row;
+  margin-right: 3em;
+}
+.navbar-container__secondaryBox--button {
+  padding: 1em;
+  background-color: #ebe0d6;
+  margin-right: 10%;
+}
+.navbar-container__secondaryBox--button img {
+  width: 1em;
+  height: 1em;
+}
+.navbar-container__secondaryBox--button:hover {
+  box-shadow: 0 0 5px 5px #b3b3b3;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1%;
+}
+.main-container__leftColumn {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  width: 17em;
+}
+.main-container__leftColumn--firstItem {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3em;
+  border-bottom: 1px solid #DCDCDC;
+  margin-bottom: 1em;
+}
+.main-container__leftColumn--firstItem input {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.main-container__leftColumn--firstItem span a {
+  text-decoration: none;
+  color: #808080;
+}
+.main-container__leftColumn--firstItem span a:hover {
+  text-decoration: underline;
+}
+.main-container__leftColumn--secondItem {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3em 0.3em 0.6em 0.3em;
+  border-bottom: 1px solid #DCDCDC;
+  margin-bottom: 1em;
+}
+.main-container__leftColumn--secondItem > div {
+  display: flex;
+  flex-direction: row;
+}
+.main-container__leftColumn--secondItem > div div:nth-child(1) {
+  background-color: #85d6a3;
+  font-weight: bold;
+  color: white;
+}
+.main-container__leftColumn--secondItem > div div:nth-child(2) {
+  font-size: 16px;
+  font-weight: lighter;
+  margin: 5%;
+}
+.main-container__leftColumn--secondItem > div div:nth-child(2) input {
+  width: 3em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.main-container__leftColumn--secondItem > div div:nth-child(2) button {
+  background-color: #f0e8e0;
+  border-radius: 50px;
+}
+.main-container__leftColumn--secondItem > div div:nth-child(2) button:hover {
+  color: #85d6a3;
+  text-shadow: 0px 0px 6px #FFFFFF;
+  box-shadow: 0px 5px 40px -10px #000000;
+  transition: 0.4s ease 0s;
+}
+.main-container__leftColumn--thirdItem {
+  display: flex;
+  flex-direction: column;
+}
+.main-container__leftColumn--thirdItem div {
+  display: flex;
+  flex-direction: row;
+}
+.main-container__leftColumn--thirdItem div p {
+  margin-left: 2%;
+  font-size: 15px;
+}
+.main-container__leftColumn--thirdItem div img {
+  width: 40px;
+}
+.main-container__leftColumn--thirdItem a {
+  padding: 0.7em;
+  text-decoration: none;
+  color: #808080;
+}
+.main-container__leftColumn--thirdItem a:hover {
+  text-decoration: underline;
+}
+.main-container__middleColumn {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+.main-container__middleColumn--primaryBox {
+  display: flex;
+  flex-direction: row;
+  width: 50em;
+  background-color: #ffffff;
+  padding: 2em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #DCDCDC;
+}
+.main-container__middleColumn--primaryBox:hover {
+  box-shadow: 0px 5px 40px -10px #000000;
+}
+.main-container__middleColumn--primaryBox img {
+  width: 15em;
+  height: 10em;
+}
+.main-container__middleColumn--primaryBox div {
+  margin-left: 2em;
+}
+.main-container__middleColumn--primaryBox div h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.main-container__middleColumn--primaryBox div button {
+  width: 7em;
+  background-color: #85d6a3;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: 0.4s ease 0s;
+}
+.main-container__middleColumn--primaryBox div button a {
+  color: #fff;
+  text-decoration: none;
+}
+.main-container__middleColumn--primaryBox div button:hover {
+  text-shadow: 0px 0px 6px #FFFFFF;
+  box-shadow: 0px 5px 40px -10px #000000;
+  transition: 0.4s ease 0s;
+}
+.main-container__middleColumn--secondaryBox {
+  display: flex;
+  flex-direction: row;
+  padding: 2em;
+  background-color: #ffffff;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #DCDCDC;
+}
+.main-container__middleColumn--secondaryBox:hover {
+  box-shadow: 0px 5px 40px -10px #000000;
+}
+.main-container__middleColumn--secondaryBox img {
+  width: 12em;
+  height: 10em;
+}
+.main-container__middleColumn--secondaryBox div {
+  display: flex;
+  flex-direction: column;
+  width: 30em;
+  margin-left: 2em;
+}
+.main-container__middleColumn--secondaryBox div h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.main-container__middleColumn--secondaryBox div button {
+  width: 10em;
+  color: #fff;
+  background-color: #85d6a3;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: 0.4s ease 0s;
+}
+.main-container__middleColumn--secondaryBox div button:hover {
+  text-shadow: 0px 0px 6px #FFFFFF;
+  box-shadow: 0px 5px 40px -10px #000000;
+  transition: 0.4s ease 0s;
+}
+.main-container__middleColumn--tertiaryBox {
+  display: flex;
+  flex-direction: row;
+  padding: 2em;
+  background-color: #ffffff;
+  border-bottom: 1px solid #DCDCDC;
+}
+.main-container__middleColumn--tertiaryBox:hover {
+  box-shadow: 0px 5px 40px -10px #000000;
+}
+.main-container__middleColumn--tertiaryBox img {
+  width: 12em;
+  height: 10em;
+}
+.main-container__middleColumn--tertiaryBox div {
+  display: flex;
+  flex-direction: column;
+  width: 30em;
+  margin-left: 2em;
+}
+.main-container__middleColumn--tertiaryBox div h2 {
+  margin: 0;
+}
+.main-container__middleColumn--tertiaryBox div button {
+  width: 11em;
+  color: #fff;
+  background-color: #85d6a3;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: 0.4s ease 0s;
+}
+.main-container__middleColumn--tertiaryBox div button:hover {
+  text-shadow: 0px 0px 6px #FFFFFF;
+  box-shadow: 0px 5px 40px -10px #000000;
+  transition: 0.4s ease 0s;
+}
+.main-container__rightColumn {
+  padding: 2em;
+  border: 2px solid grey;
+}
+.main-container__rightColumn a {
+  text-transform: none;
+}
+
+/*# sourceMappingURL=input.css.map */
