@@ -13,9 +13,23 @@ function handleLoginResponse(responseObject, username) {
     if(responseObject.status) {
         sessionStorage.setItem("loginStatus", true);
         sessionStorage.setItem("username", username);
+        sessionStorage.setItem("userID", responseObject.messages.userID);
         location.href = 'includes/homepage/homepage.php';
     } else {
-        document.getElementById('error-box').innerHTML += '<span>' + responseObject.messages + '</span>';   
+        console.log("errors" + responseObject.messages);
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
+
+        let ul = document.getElementById('errors'); 
+        ul.innerHTML = '';  
+        document.getElementsByClassName('container__error-box')[0].style.visibility = 'visible';
+        
+        responseObject.messages.forEach(message => {
+            let li = document.createElement('li');
+            li.innerHTML = message;
+            ul.append(li);
+        });
+        setTimeout(function(){ document.getElementsByClassName('container__error-box')[0].style.visibility = 'hidden'; }, 3000);
     }
 }
 function handleLoginRequest() {
@@ -60,7 +74,6 @@ function handleLoginRequest() {
                   
         }
     });
-    
 }
 
 handleLoginRequest();
