@@ -1,10 +1,7 @@
 <?php
 
-//require autoload
-
 require '../models/user.php';
 require '../config/database.php';
-
 
 $method = $_SERVER['REQUEST_METHOD'];
     
@@ -42,7 +39,6 @@ switch($method) {
 
         if($status) {
             $results = $user->findByUsername($username);
-            $messages['userID'] = $results[0]['id'];
             if(!$results) {
                 $status = false;
                 $messages[] = "This username does not exists!";
@@ -52,6 +48,9 @@ switch($method) {
                         $status = false;
                         $messages[] = "Password does not match!";
                     }
+                }
+                if($status) {
+                    $messages['userID'] = $results[0]['id'];
                 }
             }
         }

@@ -1,6 +1,5 @@
 <?php
 
-
 class Message {
     private $db;
     private $table_name = "messages";
@@ -9,8 +8,15 @@ class Message {
         $this->db = $db;
     }
 
-    public function findAll() {
-        $stmt = "SELECT user_id, book_name, author, genre, read_pages, review, update_at FROM books";
+    public function findAll($history) {
+        if($history == true) {
+            $stmt = "SELECT user_id, username, message, created_at 
+            FROM messages";
+        } else {
+            $stmt = "SELECT user_id, username, message, created_at
+            FROM messages
+            LIMIT 10";
+        }
     
         try {
             $stmt = $this->db->query($stmt);
@@ -21,7 +27,6 @@ class Message {
         }
     }
 
-    
     public function findByUserId($id) {
         $stmt = "SELECT id, book_name, author, genre, read_pages, review, updated_at FROM books WHERE id=?";
         
@@ -38,16 +43,13 @@ class Message {
         }
     } 
 
-    public function insert($user_id, $book_name, $author, $genre, $read_pages, $review) {
+    public function insert($user_id, $username, $msg) {
         try {
-            $stmt = $this->db->prepare("INSERT INTO books(user_id, book_name, author, genre, read_pages, review) VALUES(?, ?, ?, ?, ?, ?)");
+            $stmt = $this->db->prepare("INSERT INTO messages(user_id, username, message) VALUES(?, ?, ?)");
             $stmt->execute([
                 $user_id,
-                $book_name,
-                $author,
-                $genre,
-                $read_pages,
-                $review
+                $username,
+                $msg,
             ]);
 
             return 1;
