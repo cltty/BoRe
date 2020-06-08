@@ -1,0 +1,92 @@
+body {
+  background-color: #ebe0d6;
+  font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+}
+
+.container {
+  position: fixed;
+  margin: auto;
+  left: 32%;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+.container__title-box {
+  margin: auto;
+}
+.container__title-box--title {
+  margin: auto;
+  padding: 30px;
+  color: #663300;
+  letter-spacing: 16px;
+  font-weight: bold;
+  font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+  font-size: 100px;
+  text-shadow: 1px 1px grey;
+}
+.container__form {
+  margin: auto;
+  background-color: #ffffff;
+  padding: 20px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 5px 40px -15px rgba(0, 0, 0, 0.57);
+}
+.container__form--input-box {
+  margin: auto;
+  width: 300px;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+}
+.container__form--input-box label {
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+.container__form--input-box input, .container__form--input-box textarea, .container__form--input-box select {
+  padding: 10px;
+  text-align: center;
+  background: #f2f2f2;
+}
+.container__form--input-box input:hover, .container__form--input-box textarea:hover, .container__form--input-box select:hover {
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+}
+.container__form--input-box textarea {
+  resize: none;
+}
+.container__form--bttn-box {
+  margin: auto;
+}
+.container__form--bttn-box button {
+  width: 300px;
+  background-color: #ebe0d6;
+  color: grey;
+  font-weight: 90;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  transition: 0.3s ease 0s;
+  text-transform: uppercase;
+}
+.container__form--bttn-box button:hover {
+  letter-spacing: 3px;
+  background-color: #ebe0d6;
+  color: white;
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+}
+.container__form--link-box {
+  margin: auto;
+  font-size: 15px;
+}
+.container__form--link-box a {
+  text-decoration: none;
+  color: #ce8181;
+}
+.container__form--link-box a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=add-review.css.map */
