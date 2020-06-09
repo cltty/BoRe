@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/add-review.css">
-    <script type="text/javascript" src="add-review.js" defer></script>
-    <title>Add review</title>
+    <script type="text/javascript" src="edit-review.js" defer></script>
+    <title>Edit review</title>
 </head>
 <body>
     <section class="container">
         <div class="container__title-box">
-            <h1 class="container__title-box--title">Add review</h1>
+            <h1 class="container__title-box--title">Edit</h1>
         </div>
         <div class="container__form">
             <span class="container__form--input-box">
@@ -41,11 +41,7 @@
             <span class="container__form--bttn-box">
                 <button type="submit" id="submitButton">Submit</button>
             </span>
-            <span class="container__form--bttn-box">
-                <button type="submit" onClick="goBack()">Go Back</button>
-            </span>
             
-            <ul id="login-form-messages"></ul>
         </div>
     </section>
 </body>

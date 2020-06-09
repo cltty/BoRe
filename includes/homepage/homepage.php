@@ -33,11 +33,9 @@
   <main class="main-container">
     <section class="main-container__leftColumn">
       <div class="main-container__leftColumn--firstItem">
-        <h2>CURENTLY READING</h2>
-        <input type="text" placeholder="Search books">
+        <h2>WHAT IS EVERYONE READING</h2>
         <span>
-          <a href="#">Recommendation</a>
-          <a href="#">General update</a>
+          <a href="../recommendation/recommendation.php">Take a look</a>
         </span>
       </div>
 
@@ -51,9 +49,9 @@
           </div>
           <div>
 
-            <p>I want to read<input type="number" placeholder="12" min="1">books in 2020</p>
+            <p>I want to read<input type="number" id="challenge" placeholder="12" min="1">books in 2020</p>
 
-            <button id="readingChallengeStartButton">Start Challenge</button>
+            <button id="readingChallengeStartButton" onClick="startChallenge()">Start Challenge</button>
 
           </div>
         </div>
@@ -65,7 +63,7 @@
           <img src="https://img.icons8.com/emoji/48/000000/open-book-emoji.png"/>
           <p>What do you want to read next?</p>
         </div>
-        <a href="#">Recommendation</a>
+        <a href="../recommendation/recommendation.php">Recommendation</a>
       </div>
 
 
@@ -90,7 +88,7 @@
         <div>
             <h2>Exactly What to Say: The Magic Words for Influence and Impact</h2>
             <p>by Phil M. Jones</p>
-            <button>Want to read</button>
+            <button onClick="wantToRead()">Want to read</button>
             <p>Often the decision between a customer choosing you over someone like you is your ability to know exactly what to say, when to say it, and how to make it count.
             Phil M. Jones…<a href="#">Continue reading</a>
             </p>
@@ -103,7 +101,7 @@
         <div>
           <h2>Changed your opinion?</h2>
           <p>Update your review right now!Let the others know your opinion.</p>
-          <button><a href="../update-review/update-review.php">UPDATE OPINION</a></button>
+          <button><a href="../mybooks/mybooks.php">UPDATE OPINION</a></button>
         </div>
       </div>
     </section>

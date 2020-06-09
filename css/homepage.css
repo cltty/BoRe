@@ -298,4 +298,249 @@ body {
   font-weight: bold;
 }
 
-/*# sourceMappingURL=output.css.map */
+@media only screen and (max-width: 769px) {
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1%;
+  }
+  .main-container__leftColumn {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    width: 200px;
+  }
+  .main-container__leftColumn--firstItem {
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    padding: 0.3em;
+    border-bottom: 1px solid #DCDCDC;
+    margin-bottom: 1em;
+  }
+  .main-container__leftColumn--firstItem input {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .main-container__leftColumn--firstItem span a {
+    text-decoration: none;
+    color: #808080;
+  }
+  .main-container__leftColumn--firstItem span a:hover {
+    text-decoration: underline;
+  }
+  .main-container__leftColumn--secondItem {
+    display: flex;
+    flex-direction: column;
+    padding: 0.3em 0.3em 0.6em 0.3em;
+    border-bottom: 1px solid #DCDCDC;
+    margin-bottom: 1em;
+  }
+  .main-container__leftColumn--secondItem > div {
+    display: flex;
+    flex-direction: row;
+  }
+  .main-container__leftColumn--secondItem > div div:nth-child(1) {
+    background-color: #85d6a3;
+    font-weight: bold;
+    color: white;
+  }
+  .main-container__leftColumn--secondItem > div div:nth-child(2) {
+    font-size: 10px;
+    font-weight: lighter;
+    margin: 5%;
+  }
+  .main-container__leftColumn--secondItem > div div:nth-child(2) input {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  .main-container__leftColumn--secondItem > div div:nth-child(2) button {
+    background-color: #f0e8e0;
+    border-radius: 50px;
+  }
+  .main-container__leftColumn--secondItem > div div:nth-child(2) button:hover {
+    color: #85d6a3;
+    text-shadow: 0px 0px 6px #FFFFFF;
+    box-shadow: 0px 5px 40px -10px #000000;
+    transition: 0.4s ease 0s;
+  }
+  .main-container__leftColumn--thirdItem {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-container__leftColumn--thirdItem div {
+    display: flex;
+    flex-direction: row;
+  }
+  .main-container__leftColumn--thirdItem div p {
+    margin-left: 2%;
+    font-size: 15px;
+  }
+  .main-container__leftColumn--thirdItem div img {
+    width: 20px;
+    height: 20px;
+  }
+  .main-container__leftColumn--thirdItem a {
+    padding: 0.7em;
+    text-decoration: none;
+    color: #808080;
+  }
+  .main-container__leftColumn--thirdItem a:hover {
+    text-decoration: underline;
+  }
+  .main-container__middleColumn {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    width: 200px;
+  }
+  .main-container__middleColumn--primaryBox {
+    display: flex;
+    flex-direction: column;
+    width: 134px;
+    background-color: #ffffff;
+    padding: 2em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid #DCDCDC;
+  }
+  .main-container__middleColumn--primaryBox:hover {
+    box-shadow: 0px 5px 40px -10px #000000;
+  }
+  .main-container__middleColumn--primaryBox img {
+    width: 132px;
+    height: 100px;
+  }
+  .main-container__middleColumn--primaryBox div {
+    margin-left: 2em;
+  }
+  .main-container__middleColumn--primaryBox div h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .main-container__middleColumn--primaryBox div button {
+    width: 7em;
+    background-color: #85d6a3;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: 0.4s ease 0s;
+  }
+  .main-container__middleColumn--primaryBox div button a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .main-container__middleColumn--primaryBox div button:hover {
+    text-shadow: 0px 0px 6px #FFFFFF;
+    box-shadow: 0px 5px 40px -10px #000000;
+    transition: 0.4s ease 0s;
+  }
+  .main-container__middleColumn--secondaryBox {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    background-color: #ffffff;
+    margin-bottom: 2em;
+    border-bottom: 1px solid #DCDCDC;
+  }
+  .main-container__middleColumn--secondaryBox:hover {
+    box-shadow: 0px 5px 40px -10px #000000;
+  }
+  .main-container__middleColumn--secondaryBox img {
+    width: 185px;
+    height: 100px;
+  }
+  .main-container__middleColumn--secondaryBox div {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    margin-left: 2em;
+  }
+  .main-container__middleColumn--secondaryBox div h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .main-container__middleColumn--secondaryBox div button {
+    width: 10em;
+    color: #fff;
+    background-color: #85d6a3;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: 0.4s ease 0s;
+  }
+  .main-container__middleColumn--secondaryBox div button:hover {
+    text-shadow: 0px 0px 6px #FFFFFF;
+    box-shadow: 0px 5px 40px -10px #000000;
+    transition: 0.4s ease 0s;
+  }
+  .main-container__middleColumn--tertiaryBox {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    background-color: #ffffff;
+    border-bottom: 1px solid #DCDCDC;
+  }
+  .main-container__middleColumn--tertiaryBox:hover {
+    box-shadow: 0px 5px 40px -10px #000000;
+  }
+  .main-container__middleColumn--tertiaryBox img {
+    width: 185px;
+    height: 100px;
+  }
+  .main-container__middleColumn--tertiaryBox div {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    margin-left: 2em;
+  }
+  .main-container__middleColumn--tertiaryBox div h2 {
+    margin: 0;
+  }
+  .main-container__middleColumn--tertiaryBox div button {
+    width: 11em;
+    color: #fff;
+    background-color: #85d6a3;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: 0.4s ease 0s;
+  }
+  .main-container__middleColumn--tertiaryBox div button a {
+    text-decoration: none;
+    color: white;
+  }
+  .main-container__middleColumn--tertiaryBox div button:hover {
+    text-shadow: 0px 0px 6px #FFFFFF;
+    box-shadow: 0px 5px 40px -10px #000000;
+    transition: 0.4s ease 0s;
+  }
+  .main-container__rightColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 1750px;
+    overflow-y: scroll;
+  }
+  .main-container__rightColumn div {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .main-container__rightColumn div img {
+    width: 90px;
+    height: 90px;
+  }
+  .main-container__rightColumn div a {
+    color: black;
+    text-decoration: none;
+  }
+  .main-container__rightColumn div:hover {
+    background-color: grey;
+  }
+  .main-container__rightColumn div:hover a {
+    color: white;
+    font-weight: bold;
+  }
+}
+
+/*# sourceMappingURL=homepage.css.map */

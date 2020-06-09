@@ -10,7 +10,7 @@ class Book {
     }
 
     public function findAll() {
-        $stmt = "SELECT user_id, book_name, author, genre, read_pages, review, update_at FROM books";
+        $stmt = "SELECT user_id, book_name, author, genre, read_pages, review, updated_at FROM books";
     
         try {
             $stmt = $this->db->query($stmt);
@@ -26,7 +26,23 @@ class Book {
         $stmt = "SELECT id, book_name, author, genre, read_pages, review, updated_at FROM books WHERE user_id=?";
         
         try {
-            $stmt = $this->conn->prepare($stmt);
+            $stmt = $this->db->prepare($stmt);
+            $stmt->execute([
+                $id
+            ]);
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+
+        } catch(PDOException $e) {
+            exit($e->getMessage());
+        }
+    } 
+
+    public function findById($id) {
+        $stmt = "SELECT id, book_name, author, genre, read_pages, review, updated_at FROM books WHERE id=?";
+        
+        try {
+            $stmt = $this->db->prepare($stmt);
             $stmt->execute([
                 $id
             ]);
@@ -48,6 +64,27 @@ class Book {
                 $genre,
                 $read_pages,
                 $review
+            ]);
+
+            return 1;
+        } catch(PDOException $e) {
+            return 0;
+        }
+    }
+
+    public function update($id, $book_name, $author, $genre, $read_pages, $review) {
+        try {
+            $stmt = $this->db->prepare("UPDATE books
+                SET book_name = ?, author = ?, genre = ?, read_pages = ?, review = ?
+                WHERE id = ?
+            ");
+            $stmt->execute([
+                $book_name,
+                $author,
+                $genre,
+                $read_pages,
+                $review,
+                $id
             ]);
 
             return 1;

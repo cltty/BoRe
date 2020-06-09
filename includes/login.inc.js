@@ -16,7 +16,6 @@ function handleLoginResponse(responseObject, username) {
         sessionStorage.setItem("userID", responseObject.messages.userID);
         location.href = 'includes/homepage/homepage.php';
     } else {
-        console.log("errors" + responseObject.messages);
         document.getElementById('username').value = '';
         document.getElementById('password').value = '';
 
