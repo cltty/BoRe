@@ -1,0 +1,120 @@
+body {
+  background-color: #ebe0d6;
+}
+
+.container {
+  font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+  position: fixed;
+  top: 10%;
+  left: 32%;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+.container__title-box--title {
+  color: #663300;
+  letter-spacing: 16px;
+  font-weight: bold;
+  font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+  font-size: 100px;
+  text-shadow: 1px 1px grey;
+}
+.container__info-box {
+  margin: auto;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 0px 5px 40px -15px rgba(0, 0, 0, 0.57);
+}
+.container__info-box div {
+  padding: 10px;
+  margin: auto;
+}
+.container__info-box div button {
+  width: 200px;
+  background-color: #ebe0d6;
+  color: grey;
+  font-weight: 90;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  transition: 0.3s ease 0s;
+  text-transform: uppercase;
+}
+.container__info-box div button a {
+  text-decoration: none;
+  color: grey;
+}
+.container__info-box div button a:hover {
+  color: white;
+}
+.container__info-box div button:hover {
+  letter-spacing: 3px;
+  background-color: #ebe0d6;
+  color: white;
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+}
+
+#username {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+@media only screen and (max-width: 769px) {
+  .container {
+    font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+    position: fixed;
+    top: 10%;
+    left: 22%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  .container__title-box--title {
+    color: #663300;
+    letter-spacing: 9px;
+    font-weight: bold;
+    font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+    font-size: 30px;
+    text-shadow: 1px 1px grey;
+  }
+  .container__info-box {
+    margin: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0px 5px 40px -15px rgba(0, 0, 0, 0.57);
+  }
+  .container__info-box div {
+    padding: 10px;
+    margin: auto;
+  }
+  .container__info-box div button {
+    width: 200px;
+    background-color: #ebe0d6;
+    color: grey;
+    font-weight: 90;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: 0.3s ease 0s;
+    text-transform: uppercase;
+  }
+  .container__info-box div button a {
+    text-decoration: none;
+    color: grey;
+  }
+  .container__info-box div button a:hover {
+    color: white;
+  }
+  .container__info-box div button:hover {
+    letter-spacing: 3px;
+    background-color: #ebe0d6;
+    color: white;
+    box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.3s ease 0s;
+  }
+}
