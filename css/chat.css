@@ -127,4 +127,112 @@
   color: grey;
 }
 
-/*# sourceMappingURL=chat.css.map */
+@media only screen and (max-width: 769px) {
+  .container {
+    width: 500px;
+    margin: auto;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+  }
+  .container__error-box {
+    visibility: hidden;
+    border: 2px solid red;
+    background-color: lightcoral;
+    margin: 2%;
+  }
+  .container__side-menu {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  .container__side-menu--button {
+    width: 200px;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: #ebe0d6;
+    font-weight: 90;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: 0.3s ease 0s;
+    text-transform: uppercase;
+  }
+  .container__side-menu--button:hover {
+    letter-spacing: 3px;
+    background-color: #ebe0d6;
+    box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.3s ease 0s;
+  }
+  .container__side-menu--button:hover a {
+    color: white;
+  }
+  .container__side-menu--button a {
+    text-decoration: none;
+    color: grey;
+  }
+  .container__chat {
+    margin: auto;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0px 5px 40px -15px rgba(0, 0, 0, 0.57);
+  }
+  .container__chat--messages {
+    padding: 10px;
+    height: 92%;
+    overflow-y: scroll;
+    border-bottom: 2px solid grey;
+  }
+  .container__chat--messages ul {
+    list-style: none;
+    padding: 0;
+  }
+  .container__chat--messages ul div {
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 2px solid grey;
+    border-radius: 10px;
+  }
+  .container__chat--messages ul div span {
+    display: flex;
+    flex-direction: row;
+  }
+  .container__chat--messages ul div span small {
+    margin: 5px;
+  }
+  .container__chat--messages ul div span li {
+    margin: 3px;
+    word-break: break-all;
+  }
+  .container__chat--send {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    height: 8%;
+  }
+  .container__chat--send textarea {
+    resize: none;
+    height: 90%;
+    width: 90%;
+    margin-right: 10px;
+  }
+  .container__chat--send button {
+    text-decoration: none;
+    color: grey;
+    font-weight: 90;
+    margin: 5px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: 0.3s ease 0s;
+  }
+  .container__chat--send button:hover {
+    letter-spacing: 3px;
+    background: none;
+    color: white;
+    box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.3s ease 0s;
+  }
+}

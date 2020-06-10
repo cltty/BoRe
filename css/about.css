@@ -1,0 +1,52 @@
+* {
+  background-color: #ebe0d6;
+}
+
+.container {
+  position: fixed;
+  top: 17%;
+  left: 32%;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+.container__title {
+  color: #663300;
+  letter-spacing: 16px;
+  font-weight: bold;
+  font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+  font-size: 50px;
+  text-shadow: 1px 1px grey;
+}
+.container__body {
+  color: black;
+  font-weight: bold;
+  font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+  font-size: 20px;
+  text-shadow: 1px 1px grey;
+}
+.container__body a {
+  text-decoration: none;
+}
+.container__body a:hover {
+  letter-spacing: 3px;
+  color: gray;
+}
+
+@media only screen and (max-width: 769px) {
+  .container {
+    margin: auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  .container__title-box--title {
+    margin: auto;
+    color: #663300;
+    letter-spacing: 9px;
+    font-weight: bold;
+    font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+    font-size: 30px;
+    text-shadow: 1px 1px grey;
+  }
+}
