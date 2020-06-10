@@ -1,7 +1,7 @@
 <?php
 
 require '../config/database.php';
-require '../models/message.php';
+require '../models/news.php';
 $method = $_SERVER['REQUEST_METHOD'];
     
 switch($method) {
@@ -9,13 +9,9 @@ switch($method) {
         header('Content-Type: application/json');
         $db = new Database();
         $dbh = $db->getConnection();
-        $message = new Message($dbh);
+        $news = new News($dbh);
 
-        if(isset($_GET['history'])) {
-            echo json_encode($message->findAll(true));
-        } else {
-            echo json_encode($message->findAll(false));
-        }
+        echo json_encode($news->findAll());
 
     break;
         

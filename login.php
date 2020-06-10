@@ -12,6 +12,9 @@
         <div class="container__title-box">
             <h1 class="container__title-box--title">Book review</h1>
         </div>
+        <div class="container__error-box">
+            <ul id="errors"></ul>
+        </div>
         <div class="container__form">
             <span class="container__form--input-box">
                 <label>Username</label>
@@ -27,7 +30,6 @@
             <span class="container__form--link-box">
                 Not registered?<a href="signin.php">Create an acount</a>
             </span>
-            <ul id="login-form-messages"></ul>
         </div>
     </section>
     

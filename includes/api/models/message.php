@@ -27,6 +27,7 @@ class Message {
         }
     }
 
+    
     public function findByUserId($id) {
         $stmt = "SELECT id, book_name, author, genre, read_pages, review, updated_at FROM books WHERE id=?";
         
