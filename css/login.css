@@ -19,6 +19,12 @@ body {
   font-size: 100px;
   text-shadow: 1px 1px grey;
 }
+.container__error-box {
+  visibility: hidden;
+  border: 2px solid red;
+  background-color: lightcoral;
+  margin: 2%;
+}
 .container__form {
   margin-left: 160px;
   background-color: #ffffff;
@@ -76,6 +82,8 @@ body {
   text-decoration: underline;
 }
 
+<<<<<<< HEAD
+=======
 body {
   background-color: #ebe0d6;
   font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
@@ -160,6 +168,7 @@ body {
   text-decoration: underline;
 }
 
+>>>>>>> 0e2e1f0f6cb4fed65293ff5d129911c48b100511
 @media only screen and (max-width: 769px) {
   .container {
     width: 300px;
@@ -237,3 +246,8 @@ body {
     text-decoration: underline;
   }
 }
+<<<<<<< HEAD
+
+/*# sourceMappingURL=login.css.map */
+=======
+>>>>>>> 0e2e1f0f6cb4fed65293ff5d129911c48b100511
