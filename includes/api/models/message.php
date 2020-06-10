@@ -11,10 +11,12 @@ class Message {
     public function findAll($history) {
         if($history == true) {
             $stmt = "SELECT user_id, username, message, created_at 
-            FROM messages";
+            FROM messages
+            ORDER BY created_at DESC";
         } else {
             $stmt = "SELECT user_id, username, message, created_at
             FROM messages
+            ORDER BY created_at DESC
             LIMIT 10";
         }
     
