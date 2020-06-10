@@ -2,6 +2,8 @@
 
 require '../config/database.php';
 require '../models/book.php';
+require '../models/news.php';
+
 $method = $_SERVER['REQUEST_METHOD'];
     
 switch($method) {

@@ -9,7 +9,7 @@
 </head>
 <body>
     <section class="container">
-        <div class="container__title">
+        <div class="container__navbar">
             <button>
                 <a href="../homepage/homepage.php">Homepage</a>
             </button>
@@ -19,6 +19,9 @@
             <button>
                 <a href="../chat/chat.php">Chat</a>
             </button>
+        </div>
+        <div class="container__title">
+            My Books
         </div>
         <table class="container__table">
             <thead class="container__table--header">

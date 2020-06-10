@@ -12,6 +12,9 @@
         <div class="navbar__title">Chat Room</div>
     </nav>
     <main class="container">
+        <div class="container__error-box">
+            <ul id="errors"></ul>
+        </div>
         <section class="container__side-menu">
             <button class="container__side-menu--button">
                 <a href='../homepage/homepage.php'>Homepage</a>
@@ -20,7 +23,7 @@
                 <a href='../profile/profile.php' >Check profile</a>
             </button>
             <button class="container__side-menu--button">
-                <a href='#' >Check books</a>
+                <a href='../mybooks/mybooks.php' >Check books</a>
             </button>
             <button class="container__side-menu--button">
                 <a href='history.php'>History</a>

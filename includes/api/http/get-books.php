@@ -18,12 +18,14 @@ switch($method) {
                 echo json_encode($book->findById($_GET['id']));
             }
             else {
-                echo json_encode($book->findAll());
+                if("true" == $_GET['all']) {  
+                    echo json_encode($book->findAll(true));
+                } else {
+                    echo json_encode($book->findAll(false));
+                }
             }
         }
-
     break;
-        
     default: 
         http_response_code(400);
     break;

@@ -1,3 +1,11 @@
+var all = true;
+function getFromUrl() {
+    let urlString = window.location.href;
+    let url = new URL(urlString);
+    all = url.searchParams.get("all");
+}
+getFromUrl();
+
 function loadBooks() {
     const request = new XMLHttpRequest();
     
@@ -10,7 +18,6 @@ function loadBooks() {
         }
         if(responseObject) {
             let tbody = document.getElementsByClassName("container__table--body")[0];
-
             responseObject.forEach(function(entry) {
                 
                 let tr = document.createElement('tr');
@@ -41,7 +48,8 @@ function loadBooks() {
         
         }
     }  
-    request.open('GET', '../api/http/get-books.php');
+    console.log(all);
+    request.open('GET', '../api/http/get-books.php?all=' + all);
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     request.send();
 }

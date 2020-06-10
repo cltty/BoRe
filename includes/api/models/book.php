@@ -9,9 +9,16 @@ class Book {
         $this->db = $db;
     }
 
-    public function findAll() {
-        $stmt = "SELECT user_id, book_name, author, genre, read_pages, review, updated_at FROM books";
-    
+    public function findAll($all) {
+        if($all == true) {
+            $stmt = "SELECT user_id, book_name, author, genre, read_pages, review, updated_at FROM books";
+        } else {
+            $stmt = "SELECT user_id, book_name, author, genre, read_pages, review, updated_at 
+            FROM books
+            ORDER BY updated_at DESC
+            LIMIT 10";
+        }
+        
         try {
             $stmt = $this->db->query($stmt);
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);

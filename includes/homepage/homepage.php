@@ -35,7 +35,7 @@
       <div class="main-container__leftColumn--firstItem">
         <h2>WHAT IS EVERYONE READING</h2>
         <span>
-          <a href="../recommendation/recommendation.php">Take a look</a>
+          <a href="../recommendation/recommendation.php?all=true">Take a look</a>
         </span>
       </div>
 
@@ -63,7 +63,7 @@
           <img src="https://img.icons8.com/emoji/48/000000/open-book-emoji.png"/>
           <p>What do you want to read next?</p>
         </div>
-        <a href="../recommendation/recommendation.php">Recommendation</a>
+        <a href="../recommendation/recommendation.php?all=false">Recommendation</a>
       </div>
 
 
