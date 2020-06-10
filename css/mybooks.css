@@ -1,0 +1,104 @@
+body {
+  background-color: #ebe0d6;
+  font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.container__navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container__navbar button {
+  width: 200px;
+  height: 40px;
+  margin-bottom: 10px;
+  background-color: #ebe0d6;
+  font-weight: 90;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  transition: 0.3s ease 0s;
+  text-transform: uppercase;
+}
+.container__navbar button:hover {
+  letter-spacing: 3px;
+  background-color: #ebe0d6;
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+}
+.container__navbar button:hover a {
+  color: white;
+}
+.container__navbar button a {
+  text-decoration: none;
+  color: grey;
+}
+.container__title {
+  margin-left: 650px;
+  margin-top: 100px;
+  color: #663300;
+  letter-spacing: 13px;
+  font-weight: bold;
+  font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+  font-size: 70px;
+  text-shadow: 1px 1px grey;
+}
+.container__table {
+  width: 1000px;
+  margin-top: 100px;
+  margin-left: 300px;
+}
+.container__table thead th {
+  padding-top: 12px;
+  padding-left: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: grey;
+  color: white;
+}
+.container__table tbody td, .container__table tbody tr {
+  border: 2px solid grey;
+  padding: 8px;
+}
+.container__table tbody tr:hover {
+  background-color: #ddd;
+}
+.container__table tbody button {
+  background-color: #ebe0d6;
+  color: grey;
+  font-weight: 90;
+  padding: 10px;
+  text-transform: uppercase;
+  transition: 0.3s ease 0s;
+  text-transform: uppercase;
+  border: none;
+}
+.container__table tbody button:hover {
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease 0s;
+}
+
+@media only screen and (max-width: 768px) {
+  .container__title {
+    margin-left: 130px;
+  }
+  .container__table {
+    width: 600px;
+    height: 600px;
+    margin-left: 60px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .container__table {
+    width: 50px;
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=mybooks.css.map */

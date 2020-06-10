@@ -16,14 +16,6 @@
         <section class="container__info-box">
             <div id="username"></div>   
             <div>
-                <button>Change Username</button>
-            </div><div>
-                <button>Change Email</button>
-            </div>
-            <div>
-                <button>Delete Account</button>
-            </div>
-            <div>
                 <button onclick="logout()">Log Out</button>
             </div>
             <div>

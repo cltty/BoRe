@@ -7,6 +7,7 @@ function loadMessages() {
         } catch(e) {
             console.error(e);
         }
+
         if(responseObject) {
             let ul = document.getElementsByClassName('messages-container')[0]; 
             responseObject.forEach(function(entry) {
@@ -41,20 +42,16 @@ function verifyMessage(message) {
     if(message.trim() === "") {
         return 0;
     }
-
     return 1;
 }
 
 function handleSendMessageResponse(responseObject, message, username) {
     if(responseObject.status) {
-        console.log("OK!");
         let ul = document.getElementsByClassName('messages-container')[0];
-        
         let div = document.createElement('div');
-
         let span = document.createElement('span');
-
         let small = document.createElement('small');
+
         small.setAttribute('id', 'username');
         small.innerHTML = username + '   ';
         let li = document.createElement('li');
@@ -78,13 +75,22 @@ function handleSendMessageResponse(responseObject, message, username) {
 
         div.append(span);
         div.append(small2);
-
-        ul.append(div);
+        ul.insertBefore(div, ul.childNodes[0]);
+        //ul.append(div);
         document.getElementById("msg").value = '';
     } else {
-        console.log("NOT OK!");
         document.getElementById("msg").value = '';
-        //document.getElementById('error-box').innerHTML += '<span>' + responseObject.messages + '</span>';   
+
+        let ul = document.getElementById('errors'); 
+        ul.innerHTML = '';  
+        document.getElementsByClassName('container__error-box')[0].style.visibility = 'visible';
+        
+        responseObject.messages.forEach(message => {
+            let li = document.createElement('li');
+            li.innerHTML = message;
+            ul.append(li);
+        });
+        setTimeout(function(){ document.getElementsByClassName('container__error-box')[0].style.visibility = 'hidden'; }, 3000);   
     }
 }
 
@@ -96,6 +102,7 @@ function handleSendMessageRequest() {
 
     form.submit.addEventListener("click", () => {
         usr = sessionStorage.getItem('username');
+        usrID = sessionStorage.getItem('userID');
 
         checkResult = verifyMessage(form.message.value);
         switch(checkResult) {
@@ -112,14 +119,14 @@ function handleSendMessageRequest() {
                         handleSendMessageResponse(responseObject, form.message.value, usr);
                     }
                 };
-                const requestData = `userID=${2}&username=${usr}&message=${form.message.value}`;
+                const requestData = `userID=${usrID}&username=${usr}&message=${form.message.value}`;
             
                 request.open('POST', '../api/http/send-message.php');
                 request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                 request.send(requestData);
             break;
             case 0:
-                console.log("Cannot send an empty message!");
+                alert("Cannot send an empty message!");
             break;
         }
     });

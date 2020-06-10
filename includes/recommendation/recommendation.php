@@ -9,7 +9,7 @@
 </head>
 <body>
     <section class="container">
-        <div class="container__title">
+        <div class="container__navbar">
             <button>
                 <a href="../homepage/homepage.php">Homepage</a>
             </button>
