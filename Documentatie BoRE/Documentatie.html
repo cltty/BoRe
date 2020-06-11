@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        Documentatie Book Reading
+    </h3>
+    <ul>
+    <li >
+        <a href="#introducere">1. introducere</a>
+        
+    </li>
+    <li><a href="#diagrama">2. diagrama</a></li>
+    <li><a href="#structura">3. structura</a>
+        <ul>
+        <li><a href="#log">3.1 logare</a></li>
+        
+        <li><a href="#inregistrare">3.2 inregistrare</a></li>
+        
+        <li><a href="#homepage">3.3 homepage</a></li>
+        <li><a href="#news">3.4 newsfeed</a></li>
+        <li><a href="#mybooks">3.5 my books</a></li>
+        <li><a href="#flux">3.6 stiri rss</a></li>
+        <li><a href="#add">3.7 add review</a></li>
+        <li><a href="#format">3.8 format</a></li>
+    
+    
+    
+    </ul>
+    </li>
+    <li><a href="#bd">4. baza de date</a></li>
+    <li><a href="#evol">5. evolutia proiectului</a></li>
+    <li><a href="#util">6. utilizare</a></li>
+    </ul>
+    <hr>
+    <H4>Echipa</H4>
+    <p>Timofte Claudiu/Antal Cosmin/Trefas Denis</p>
+    <H4>Link</H4>
+    <p>https://github.com/cltty/BoRe</p>
+    <hr>
+    <div style="margin: 10px;">
+        <ul>
+            <li id="introducere">
+                <h4>1. Introducere</h4>
+                <p>   &nbsp;&nbsp; Se dorește crearea unei aplicatii Web care permite specificarea progresului și exprimarea opiniilor/adnotărilor referitoare la lecturile realizate de o persoană sau grup de persoane (e.g. o clasă de elevi, club de lectură).
+
+                   
+                    Sistemul va realiza managementul cărților parcurse, inclusiv organizarea lor pe diverse criterii: categorie, autor, editură, an, ediție, legături cu alte cărți înrudite etc. Se vor oferi statistici diverse ce pot fi exportate în formate deschise (minimal, CSV și DocBook). Diversele anunțuri (o persoană a recenzat o carte, a apărut un alt volum de interes, modificarea clasamentului celor mai apreciate lucrari dintr-un anumit domeniu etc.) vor fi expuse ca flux de știri RSS.</p>
+                <p>Cerinte principale:</p>
+                <ul>
+                    <li>Optiunea de inregistrare/logare</li>
+                    <li>Flux de stiri</li>
+                    <li>Newsfeed cu detalii despre actiunile celorlalti utilizatori
+
+                    </li>
+                    
+                    <li>Posibilitatea exprimarii opiniei despre o anumita carte</li>
+                    <li>Posibilitatea de a vedea parerile altor utilizatori despre carte</li>
+                </ul>
+                </li>
+                <li id="diagrama"><h4>2. Diagrama</h4>
+                    <img src="./picture/TW.jpg" alt="diagram">
+                </li>
+                <li id="structura">
+                    <h4>3. Structura</h4>
+                    <P>Aplicatia incepe cu un meniu default din care utilizatorul este nevoit sa se inregistreze sau autentifice pentru a putea folosi functionalitatile site-ului.In caz contrar, pooate accesa doar paginile about si contact</P>
+                    <img src="./picture/default.png" alt="page">
+                    <ul>
+                        <li id="log">
+                            <h5>3.1 Logarea</h5>
+                            <p>Are loc doar daca utilizatorul se afla in baza de date si introduce datele corect
+                            </p>
+                            <p>Nu se permite introducerea anumitor caractere nepotrivite </p>
+                            <img src="./picture/Codlog.PNG" alt="cod">
+                            <p>Se trimit mesaje folositoare in cazul esuarii autentificarii</p>
+                            <img src="./picture/forb.png" alt="img">
+                        </li>
+                        <li id="inregistrare">
+                            <h5>3.2 Inregistrarea</h5>
+                            <p>Procedura inregistrarii este asemanatoare cu cea din cazul logarii.Aici mai trebuie completat campul email.</p>
+                            <p>Introducerea numelor deja existente,folosirea caracterelor nepotrivite sau introducerea unei parole prea scurte nu vor fi permise si vor veni cu un mesaj de eroare.</p>
+                        </li>
+                        <li id="homepage">3.3 Homepage
+                        <p>Este pagina aparuta in urma logarii sau inregistrarii.
+                                                </p>
+                        <p>De aici sunt disponibile majoritatea optiunilor</p>
+                        <p>Este organizata in 4 sectiuni principale:
+                            <ul><li>Bara de navigare</li>
+                            <li>Stiri diverse in format rss</li>
+                        <li>Optiuni cu privire la citirea unei carti sau la recenzarea\actualizarea recenziei unei carti</li>
+                    <li>Optiuni cu privire la opiniile celorlalti si in challange</li></ul>
+                        </p>
+                        <img src="./picture/home.png" alt="page">
+                        <img src="./picture/codhome.png" alt="">
+                                            </li>
+                       <li id="#news"><H5>3.4 Newsfeed</H5>
+                    <p>Se acceseaza prin optiunea Comunity si afiseaza actiunile celorlalti utilizatori,cum ar fi:
+                        recenzarea unei carti,acceptarea unui challange,ce carte isi doresc sa citeasca sau actualizarea unei recenzii </p>
+                    <img src="./picture/new.png" alt="">
+                                        </li>
+                                        <li id="mybooks"><h5>3.5 My books</h5>
+                                        <p>Permite accesarea cartilor incepute de utilizator impreuna cu editarea unei recenzii in legatura cu aceasta</p> </li>
+                     <li id="flux"><h5>3.6 Flux de stiri</h5>
+                    <p>Prezinta stiri diverse ale unui api
+                    
+
+                    </p>
+                <img src="./picture/news2.png" alt="">
+                <img src="./picture/fetch.PNG" alt="">
+            </li>
+            <li id="add"><h5>3.7 Add review</h5>
+            <p>Permite adaugarea de recenzii oricarei carti.
+                Recenzia este anonima.
+            
+
+            </p><img src="./picture/rev.png" alt=""></li>  
+            <li id="format">
+                <h5>3.8 Format</h5>
+                <p>De asemenea formatul este unul responsive</p>
+                <img src="./picture/resp.png" alt="">
+            </li> 
+                            
+
+
+
+
+                    </ul>
+                </li>
+                <li id="bd"><h4>4. Baza de date</h4>
+                Stocheaza informatii despre carti  utilizatorii inregistrati.
+                Schema bazei de date:
+                <ul><h5>Tabela Users</h5>
+                    <li>Username</li>
+                    <li>Password</li>
+                    <li>Email</li>
+                    <h5>Tabela Books</h5>
+                    <li>Id</li>
+                    <li>Book_name</li>
+                    <li>Author</li>
+                    <li>Genre</li>
+                    <li>Read_pages</li>
+                    <li>Review</li>
+                    <h5>Tabela Message</h5>
+                    <li>User_id</li>
+                    <li>Username</li>
+                    <li>Message</li>
+                    <li>Created_at</li>
+                    <h5>Tabela news</h5>
+                    <li>User_id</li>
+                    <li>Username</li>
+                    <li>Content</li>
+                    <li>Updated_at</li>
+                </ul>
+
+                </li>
+                <li id="evol">
+                    <h5>5. Evoliutia proiectului</h5>
+                    Proiectul a evoulat normal insa a avut etape de stagnare.
+                    Au fost discutii atat la nivel de design cat si la nivel de implementare
+                    <img src="./picture/fost.png" alt="">
+                    <p>Aceasta a fost prima pagina default insa am decurs la una mai practica,cu butoane detaliate s.a.</p>
+                    <img src="./picture/default2.png" alt="">
+                    <p>Din punct de vedere al organizarii , am vorbit pe diferite platforme de comunicare si am impartit task-urile astfel incat sa nu avem dificultati in ceea ce priveste compunerea produsului final</p>
+                </li>
+                <li id="util">
+                    <H5>6. Utilizare</H5>
+                    <ul><li>Pentru a putea folosi aplicația, trebuie ca utilizatorul să aibă creat un cont. În cazul în care acesta nu deține, nu va putea accesa decât pagina principală a aplicației.</li>
+                    <li>În cazul în care utilizatorul nu are cont, acesta poate crea unul folosind butonul de inregistrare.</li>
+                <li>După crearea contului, utilizatorul introduce username ul și parola in pagina de autentificare folosite la înregistrare și va fi redirecționat spre mainpage-ul aplicației.</li>
+                <li>In mainpage-ul aplicatiei utilizatorul va putea vedea parerile altor utilizatori despre anumite carti,va vedea un flux de stiri divers ,va putea adauga el insusi o recenzie pentru o carte(caompletand campurile necesare),va putea actualiza recenzia despre cartea pe care o citeste cat si numarul de pagini citite,va putea observa activitatea celorlalti utilizatori in newsfeed si va putea conversa cu alti utilizatori pe un chat </li>
+            
+            
+            </ul>
+            
+                
+            </li>
+
+        </ul>
+    </div>
+   
+
+    
+</body>
+</html>
